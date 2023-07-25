@@ -7,6 +7,12 @@
  */
 void print_string(va_list *str)
 {
+	char *s = va_arg(*str, char *);
+
+	if (s == NULL)
+	{
+		return;
+	}
 	while (*str != '\0')
 	{
 		_putchar(*str);
