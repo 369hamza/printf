@@ -4,6 +4,9 @@
 const fn_spec_t format_f[] = {
 		{'c', printf_char},
 		{'s', printf_string},
+		{'%', printf_percent},
+		{'i', printf_integer},
+		{'d', printf_integer},
 };
 
 /**
