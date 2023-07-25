@@ -5,7 +5,7 @@
  *
  *@str: string
  */
-void print_string(va_list *str)
+void print_string(va_list str)
 {
 	char *s = va_arg(*str, char *);
 
@@ -13,7 +13,7 @@ void print_string(va_list *str)
 	{
 		return;
 	}
-	while (*str != '\0')
+	while (*s != '\0')
 	{
 		_putchar(*str);
 		str++;
