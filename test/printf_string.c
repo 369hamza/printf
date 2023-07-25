@@ -5,9 +5,9 @@
  *
  *@str: string
  */
-void print_string(va_list str)
+void printf_string(va_list args)
 {
-	char *s = va_arg(*str, char *);
+	char *s = va_arg(args, char *);
 
 	if (s == NULL)
 	{
@@ -15,7 +15,7 @@ void print_string(va_list str)
 	}
 	while (*s != '\0')
 	{
-		_putchar(*str);
-		str++;
+		_putchar(*s);
+		s++;
 	}
 }

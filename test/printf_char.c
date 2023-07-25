@@ -8,7 +8,9 @@
  *Return: the character
  */
 
-int printf_char(va_list character)
+void printf_char(va_list args)
 {
-	return (_putchar(va_arg(character, int)));
+	int ch = va_arg(args, int);
+
+	_putchar(ch);
 }
