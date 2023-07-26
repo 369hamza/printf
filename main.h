@@ -12,7 +12,8 @@
  *@f: the function to a specific specifier
  *
  */
-typedef struct fn_spec {
+typedef struct fn_spec
+{
 	char specifier;
 	void (*f)(va_list args);
 } fn_spec_t;

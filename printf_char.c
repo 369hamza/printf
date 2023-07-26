@@ -3,7 +3,7 @@
 /**
  *printf_char- prints character
  *
- *@character: list
+ *@args: character argument
  *
  *Return: the character
  */

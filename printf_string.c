@@ -1,21 +1,21 @@
 #include "main.h"
 
 /**
- *print_string- prints a string
+ *printf_string- prints a string
  *
- *@str: string
+ *@args: string argument
  */
 void printf_string(va_list args)
 {
-        char *s = va_arg(args, char *);
+	char *s = va_arg(args, char *);
 
-        if (s == NULL)
-        {
-                return;
-        }
-        while (*s != '\0')
-        {
-                _putchar(*s);
-                s++;
-        }
+	if (s == NULL)
+	{
+		return;
+	}
+	while (*s != '\0')
+	{
+		_putchar(*s);
+		s++;
+	}
 }

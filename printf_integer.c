@@ -9,11 +9,11 @@
  */
 void printf_integer(va_list args)
 {
-        int num = va_arg(args, int);
-        int num_digits = 1;
-        int temp = num;
-        int a;
-        char buffer[12];
+	int num = va_arg(args, int);
+	int num_digits = 1;
+	int temp = num;
+	int a;
+	char buffer[12];
 
         if (num < 0)
         {
