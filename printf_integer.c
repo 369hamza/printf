@@ -15,25 +15,24 @@ void printf_integer(va_list args)
 	int a;
 	char buffer[12];
 
-        if (num < 0)
-        {
-                _putchar('-');
-                num = -num;
-        }
-
-        while (temp /= 10)
-                num_digits++;
-
-        a = num_digits;
-
-        do
+	if (num < 0)
 	{
-                buffer[--a] = num % 10 + '0';
-                num /= 10;
+		_putchar('-');
+		num = -num;
+	}
+
+	while (temp /= 10)
+		num_digits++;
+
+	a = num_digits;
+
+	do {
+		buffer[--a] = num % 10 + '0';
+		num /= 10;
 	} while (num);
 
-        while (a < num_digits)
-        {
-                _putchar(buffer[a++]);
-        }
+	while (a < num_digits)
+	{
+		_putchar(buffer[a++]);
+	}
 }
