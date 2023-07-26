@@ -18,6 +18,7 @@ typedef struct fn_spec {
 } fn_spec_t;
 
 
+#define BUFFER_SIZE 1024
 
 int _printf(const char *format, ...);
 int _putchar(char c);

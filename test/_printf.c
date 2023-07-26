@@ -30,7 +30,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			for (j = 0; j < 2; j++)
+			for (j = 0; j < 5; j++)
 			{
 				if (format[i] == format_f[j].specifier)
 				{
