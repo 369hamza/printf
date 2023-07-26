@@ -7,8 +7,7 @@
  *
  */
 void printf_percent(va_list args)
-{
-	(void)args;
+{(void)args;
 
-	_putchar('%');
+        _putchar('%');
 }
