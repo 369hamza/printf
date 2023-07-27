@@ -16,13 +16,11 @@ const fn_spec_t format_f[] = {
  *
  *Return: length of format
  */
-
 int _printf(const char *format, ...)
 {
 	int i, j;
 	va_list args;
 	int total_char = 0;
-	int found_specifier = 0;
 
 	va_start(args, format);
 	if (format == NULL)
@@ -30,6 +28,24 @@ int _printf(const char *format, ...)
 		va_end(args);
 		return (0);
 	}
+	total_char = loop_formats(format, args)
+		va_end(args);
+	return (total_char);
+}
+
+/**
+ *loop_formats- this a way to get small code
+ *
+ *@format: string that contain the text
+ *@args: argument
+ *
+ *Return: total_char
+ */
+int loop_formats(char *format, va_list args)
+{
+	int found_specifier = 0;
+	int total_char = 0;
+
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
@@ -61,6 +77,5 @@ int _printf(const char *format, ...)
 			total_char++;
 		}
 	}
-	va_end(args);
 	return (total_char);
 }
