@@ -22,6 +22,7 @@ int _printf(const char *format, ...)
 	int i, j;
 	va_list args;
 	int total_char = 0;
+	int found_specifier = 0;
 
 	if (format == NULL)
 	{
@@ -35,13 +36,24 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
+			if (format[i] == '\0')
+			{
+				return (-1);
+			}
 			for (j = 0; j < 5; j++)
 			{
 				if (format[i] == format_f[j].specifier)
 				{
 					total_char += format_f[j].f(args);
+					found_specifier = 1;
 					break;
 				}
+			}
+			if (!found_specifier)
+			{
+				_putchar('%');
+				_putchar(format[i]);
+				total_char += 2;
 			}
 		}
 		else
