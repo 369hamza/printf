@@ -16,8 +16,8 @@ int main(void)
 
 	len = _printf("Let's try to printf a simple sentence.\n");
 	len2 = printf("Let's try to printf a simple sentence.\n");
-	len3 = _printf(NULL);
-	len4 = 0;
+	len3 = _printf("A char inside a sentence: %c. Did it work?\n", 'F');
+	len4 = printf("A char inside a sentence: %c. Did it work?\n", 'F');
 	_printf("Length:[%d, %i]\n", len, len);
 	printf("Length:[%d, %i]\n", len2, len2);
 	_printf("Negative:[%d]\n", -762534);
