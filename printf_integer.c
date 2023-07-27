@@ -10,30 +10,21 @@
 int printf_integer(va_list args)
 {
 	int num = va_arg(args, int);
-	int num_digits = 1;
-	int temp = num;
-	int a;
-	char buffer[12];
+	int num_digits = 0;
+	unsigned int absolute;
 
 	if (num < 0)
 	{
 		_putchar('-');
-		num = -num;
-	}
-
-	while (temp /= 10)
+		absolute = num * -1;
 		num_digits++;
-
-	a = num_digits;
-
-	do {
-		buffer[--a] = num % 10 + '0';
-		num /= 10;
-	} while (num);
-
-	while (a < num_digits)
-	{
-		_putchar(buffer[a++]);
 	}
+	else
+	{
+		absolute = num;
+	}
+
+	num_digits += number_rec(absolute);
+
 	return (num_digits);
 }

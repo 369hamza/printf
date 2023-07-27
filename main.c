@@ -14,10 +14,10 @@ int main(void)
 	int len2, len3, len4;
 
 
-	len = _printf("Let's try to printf a simple sentence.\n");
-	len2 = printf("Let's try to printf a simple sentence.\n");
-	len3 = _printf("A char inside a sentence: %c. Did it work?\n", 'F');
-	len4 = printf("A char inside a sentence: %c. Did it work?\n", 'F');
+	len = _printf("%d", INT_MIN);
+	len2 = printf("%d", INT_MIN);
+	len3 = _printf("%d", -1024);
+	len4 = printf("%d", -1024);
 	_printf("Length:[%d, %i]\n", len, len);
 	printf("Length:[%d, %i]\n", len2, len2);
 	_printf("Negative:[%d]\n", -762534);
