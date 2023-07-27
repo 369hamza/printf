@@ -5,10 +5,12 @@
  *
  *@args: unused
  *
+ *Return: 1
  */
-void printf_percent(va_list args)
+int printf_percent(va_list args)
 {
 	(void)args;
 
 	_putchar('%');
+	return (1);
 }

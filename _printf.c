@@ -34,7 +34,7 @@ int _printf(const char *format, ...)
 			{
 				if (format[i] == format_f[j].specifier)
 				{
-					format_f[j].f(args);
+					total_char += format_f[j].f(args);
 					break;
 				}
 			}

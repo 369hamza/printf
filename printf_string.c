@@ -4,18 +4,23 @@
  *printf_string- prints a string
  *
  *@args: string argument
+ *
+ *Return: count
  */
-void printf_string(va_list args)
+int printf_string(va_list args)
 {
 	char *s = va_arg(args, char *);
+	int count = 0;
 
 	if (s == NULL)
 	{
-		return;
+		return (0);
 	}
 	while (*s != '\0')
 	{
 		_putchar(*s);
 		s++;
+		count++;
 	}
+	return (count);
 }

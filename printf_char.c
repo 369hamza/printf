@@ -5,12 +5,13 @@
  *
  *@args: character argument
  *
- *Return: the character
+ *Return: 1
  */
 
-void printf_char(va_list args)
+int printf_char(va_list args)
 {
 	int ch = va_arg(args, int);
 
 	_putchar(ch);
+	return (1);
 }

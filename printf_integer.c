@@ -7,7 +7,7 @@
  *
  *Return: number of character printed
  */
-void printf_integer(va_list args)
+int printf_integer(va_list args)
 {
 	int num = va_arg(args, int);
 	int num_digits = 1;
@@ -35,4 +35,5 @@ void printf_integer(va_list args)
 	{
 		_putchar(buffer[a++]);
 	}
+	return (num_digits);
 }
