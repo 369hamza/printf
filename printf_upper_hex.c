@@ -11,5 +11,5 @@ int printf_upper_hex(va_list args)
 {
 	unsigned int num = va_arg(args, unsigned int);
 
-	return (print_number_base(num, 16, 0));
+	return (print_number_base(num, 16, 1));
 }

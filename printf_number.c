@@ -4,7 +4,7 @@
  *
  *@n: The unsigned integer to be printed
  *@base: The base in which to print the number
- *@uppercase: If zero
+ *@uppercase: If not zero
  * 
  *Return: Length
  */
