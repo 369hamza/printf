@@ -7,6 +7,11 @@ const fn_spec_t format_f[] = {
 		{'%', printf_percent},
 		{'i', printf_integer},
 		{'d', printf_integer},
+		{'b', printf_binary},
+		{'u', printf_unsigned_int},
+		{'o', printf_octal},
+		{'x', printf_hex},
+		{'X', printf_upper_hex},
 };
 
 /**
@@ -32,7 +37,7 @@ int loop_formats(const char *format, va_list args)
 			{
 				return (-1);
 			}
-			for (j = 0; j < 5; j++)
+			for (j = 0; j < 10; j++)
 			{
 				if (format[i] == format_f[j].specifier)
 				{
