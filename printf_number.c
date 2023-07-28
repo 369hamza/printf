@@ -5,7 +5,7 @@
  *@n: The unsigned integer to be printed
  *@base: The base in which to print the number
  *@uppercase: If not zero
- * 
+ *
  *Return: Length
  */
 int print_number_base(unsigned int n, int base, int uppercase)
